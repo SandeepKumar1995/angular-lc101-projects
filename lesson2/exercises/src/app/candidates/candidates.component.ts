@@ -24,7 +24,23 @@ export class CandidatesComponent implements OnInit {
   }
 
   // Code the addToCrew function here:
-
+  addToCrew(person: object) {
+  console.log("function active");
+     let check : boolean = false;
+     console.log(" 1 check = " + check);
+     this.crew.forEach(member =>{
+     if (member != person){
+     check = true;
+     console.log( "first " + person );
+     console.log(" 2 check = " + check);
+     }
+     })
+     if (!check) {
+     this.crew.push(person);
+      console.log( "last " + person );
+      console.log(" 3 check = " + check);
+     }
+  }
 
   // BONUS: Code the changeMissionName function here:
 
